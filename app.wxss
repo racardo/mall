@@ -1,0 +1,19 @@
+/* 引入icon图标 */
+@import "./styles/iconfont.wxss";
+
+/* 初始化标签样式  微信小程序不支持通配符* */
+page,view,text,swiper,swiper-item,img,navigator{
+    padding: 0;   /* 内边距 */
+    margin: 0;    /* 外边距 */
+    box-sizing: border-box;
+}
+/* 定义主题颜色 */
+page{
+    --themeColor:#eb4545;
+    font-size: 24rpx;
+}
+image{
+    width: 100%;
+}
+
+

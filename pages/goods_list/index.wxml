@@ -1,0 +1,30 @@
+<SearchInput></SearchInput>
+<!-- 监听自定义事件 -->
+<Tabs tabs="{{tabs}}" bind:tabsIetmChange="hendleTabsIetmChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="frist_tab">
+            <navigator class="good_item"
+                wx:for="{{goodsList}}"
+                wx:for-item="good"
+                wx:key="goods_id"
+                url="/pages/goods_detail/index?goods_id={{good.goods_id}}"
+            >
+                <!-- 左侧 图片 -->
+                <view class="good_image_warp">
+                    <image  src="{{good.goods_small_logo}}" mode="widthFix" lazy-load="false"/>
+                      
+                </view>
+                <!-- 右侧 商品 -->
+                <view class="good_info_warp">
+                    <view class="good_name">{{good.goods_name}}</view>
+                    <view class="good_price">¥{{good.goods_price}}</view>
+                </view>
+            </navigator>
+        </view>
+    </block>
+
+
+    <block wx:if="{{tabs[1].isActive}}">1</block>
+    <block wx:if="{{tabs[2].isActive}}">2</block>
+      
+</Tabs>

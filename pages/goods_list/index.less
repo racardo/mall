@@ -1,0 +1,35 @@
+.frist_tab{
+    .good_item{
+        //伸缩盒子 左右2比3的比例
+        display: flex;
+        border: 2rpx solid #ccc;
+        .good_image_warp{
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image{
+                width: 70%;
+            }
+        }
+        .good_info_warp{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .good_name{
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:2;
+            }
+            .good_price{
+                color: var(--themeColor);
+                font-size: 32rpx;
+            }
+        }
+    }
+
+
+}
